@@ -3,6 +3,7 @@ function startTime() {
     let h = today.getHours();
     let m = today.getMinutes();
     let s = today.getSeconds();
+    h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById("hours1").innerText = h;
@@ -17,4 +18,8 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
     return i;
+}
+
+function changeFormat() {
+    document.getElementById("format").innerText = "AM"
 }

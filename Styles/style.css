@@ -5,7 +5,8 @@
 
 :root {
     --background-color: black;
-    --timer-color: linear-gradient(rgb(30, 30, 30), rgb(10, 10, 10));
+    --timer-background: linear-gradient(rgb(20, 20, 20), rgb(10, 10, 10));
+    --timer-text: rgb(10,10,10);
     --timer-text-color: rgb(200,200,200);
 } 
 
@@ -36,7 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: var(--timer-color);
+    background-image: var(--timer-background);
     color: var(--timer-text-color);
     margin: 2vh;
     border-radius: 2vh;
@@ -44,14 +45,27 @@ body {
     font-weight: bolder;
     font-size: 12vw;
     font-stretch: extra-condensed;
+    position: relative;
 }
 
 .time {
     position: absolute;
 }
 
-.top {
-
+#format {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    padding: 0.5vh 1.25vh 0.5vh 1.5vh;
+    border-radius: 2vh;
+    border: none;
+    background-color: var(--timer-text-color);
+    color: var(--timer-text);
+    font-weight: bold;
+    font-stretch: extra-condensed;
+    letter-spacing: 0.5vh;
+    text-align: center;
+    line-height: 1.5vw;
+    font-size: 1.5vw;
 }
-
 
