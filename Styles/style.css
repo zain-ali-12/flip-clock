@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+:root {
+    --background-color: black;
+    --timer-color: rgb(10,10,10);
+    --timer-text-color: rgb(200,200,200);
+} 
+
+body {
+    background-color: var(--background-color);
+}
+
 .block-container {
     display: flex;
     width: 100vw;
@@ -11,9 +21,17 @@
     justify-content: center;
 }
 
-#hours::after, #minutes::after {
-    content: ":";
-}
-
-#txt {
+.time-container {
+    height: 16vw;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--timer-color);
+    color: var(--timer-text-color);
+    margin: 2vh;
+    border-radius: 2vh;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 10vh;
 }
