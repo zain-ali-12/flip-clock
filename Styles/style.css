@@ -50,6 +50,15 @@ body {
 
 .time {
     position: absolute;
+    height: 18vh;
+}
+
+.top {
+    clip-path: inset(0 0 9vh 0);
+}
+
+.bottom {
+    clip-path: inset(9vh 0 0 0);
 }
 
 #format {
