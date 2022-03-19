@@ -13,7 +13,7 @@
 #line {
     position: absolute;
     top: 44.75vh;
-    height: 0.5vh;
+    height: 0.25rem;
     width: 100vw;
     background-color: black;
     z-index: 23;
@@ -50,15 +50,24 @@ body {
 
 .time {
     position: absolute;
-    height: 18vh;
+    height: 14vw;
+    width: inherit;
+    text-align: center;
+    padding: 3vw 0 3vw 0;
+    border-radius: 2vh;
+    background-image: var(--timer-background);
 }
 
 .top {
-    clip-path: inset(0 0 9vh 0);
+    clip-path: inset(0 0 10vw 0);
+    transform-style: preserve-3d;
+    animation: flip infinite 0.5s;
+    z-index: 23;
 }
 
+
 .bottom {
-    clip-path: inset(9vh 0 0 0);
+    clip-path: inset(10vw 0 0 0);
 }
 
 #format {
@@ -66,7 +75,7 @@ body {
     top: 1vw;
     left: 1vw;
     padding: 0.5vh 1.25vh 0.5vh 1.5vh;
-    border-radius: 2vh;
+    border-radius: 1vh;
     border: none;
     background-color: var(--timer-text-color);
     color: var(--timer-text);
@@ -76,5 +85,18 @@ body {
     text-align: center;
     line-height: 1.5vw;
     font-size: 1.5vw;
+    z-index: 2342342;
 }
 
+
+@keyframes flip {
+    0%{
+        transform: perspective(100vw) rotate3d(1, 0, 0, 0deg);
+    }
+    99%{
+        transform: perspective(100vw) rotate3d(1, 0, 0, 180deg);
+    }
+    100%{
+        transform: perspective(100vw) rotate3d(1, 0, 0, 0deg);
+    }
+}
