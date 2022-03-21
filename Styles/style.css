@@ -61,14 +61,14 @@ body {
 .top {
     clip-path: inset(0 0 10vw 0);
     transform-style: preserve-3d;
-    animation: flip infinite 0.5s;
+    /* animation: flip infinite 1s; */
     z-index: 23;
 }
-
 
 .bottom {
     clip-path: inset(10vw 0 0 0);
 }
+
 
 #format {
     position: absolute;
@@ -88,15 +88,27 @@ body {
     z-index: 2342342;
 }
 
+format:hover {
+    cursor: pointer;
+}
+
 
 @keyframes flip {
     0%{
         transform: perspective(100vw) rotate3d(1, 0, 0, 0deg);
     }
-    99%{
-        transform: perspective(100vw) rotate3d(1, 0, 0, 180deg);
+    100%{
+        transform: perspective(100vw) rotate3d(1, 0, 0, -90deg);
+    }
+}
+
+@keyframes flip1 {
+    0%{
+        transform: perspective(100vw) rotate3d(1, 0, 0, -90deg);
+        z-index: 2342;
     }
     100%{
         transform: perspective(100vw) rotate3d(1, 0, 0, 0deg);
+        z-index: 23424;
     }
 }

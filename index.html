@@ -7,23 +7,26 @@
     <title>Flip-Clock</title>
     <link rel="stylesheet" href="Styles/style.css">
 </head>
-<body onload="startTime()">
+<body onload="startSeconds()">
     <div class="" id="line"></div>
     <div class="block-container">
         <div class="time-container">
-            <div class="time" id="hours1"></div>
-            <div class="time top" >
-                <button onclick="changeFormat()" id="format">AM</button>
+            <div class="time top">
+                <div id="hours1" ></div>
+                <button onclick="changeFormat(this.innerText)" id="format">AM</button>
             </div>
             <div class="time bottom" id="hours2"></div>
+            <div class="time" id="hours3"></div>
         </div>
         <div class="time-container">
             <div class="time top" id="minutes1"></div>
             <div class="time bottom" id="minutes2"></div>
+            <div class="time" id="minutes3"></div>
         </div>
         <div class="time-container">
             <div class="time top" id="seconds1"></div>
             <div class="time bottom" id="seconds2"></div>
+            <div class="time" id="seconds3"></div>
         </div>
     </div>
     <script src="Scripts/script.js"></script>
