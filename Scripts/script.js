@@ -21,7 +21,20 @@ function changeFormat(current) {
 }
 
 function checkFormat(time) {
-    if (document.getElementById("format").innerText != "24 HOUR"){}
+    time = parseInt(time)
+    if (document.getElementById("format").innerText != "24 HOUR"){
+        return time
+    } else {
+        if (time > 12){
+            return time - 12
+        } else {
+            if (time == 0){
+                return 12
+            } else {
+                return time
+            }
+        }
+    }
 }
 
 function startHours() {
@@ -32,6 +45,7 @@ function startHours() {
     document.getElementById("hours1").innerText = h;
     document.getElementById("hours2").innerText = h;
     document.getElementById("hours3").innerText = h;
+    document.getElementById("hours4").innerText = h;
 
     document.getElementById("hours1").parentElement.style.animation = "flip 0.45s";
     document.getElementById("hours1").parentElement.addEventListener('animationend', () => {
@@ -61,6 +75,7 @@ function startMinutes() {
     document.getElementById("minutes1").innerText = m;
     document.getElementById("minutes2").innerText = m;
     document.getElementById("minutes3").innerText = m;
+    document.getElementById("minutes4").innerText = m;
 
     document.getElementById("minutes1").style.animation = "flip 0.45s";
     document.getElementById("minutes1").addEventListener('animationend', () => {
@@ -93,6 +108,7 @@ function startSeconds() {
     document.getElementById("seconds1").innerText = s;
     document.getElementById("seconds2").innerText = s;
     document.getElementById("seconds3").innerText = s;
+    // document.getElementById("seconds4").innerText = s;
 
     document.getElementById("seconds1").style.animation = "flip 0.45s";
     document.getElementById("seconds1").addEventListener('animationend', () => {
