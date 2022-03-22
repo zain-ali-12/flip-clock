@@ -108,7 +108,7 @@ function startSeconds() {
     document.getElementById("seconds1").innerText = s;
     document.getElementById("seconds2").innerText = s;
     document.getElementById("seconds3").innerText = s;
-    // document.getElementById("seconds4").innerText = s;
+    document.getElementById("seconds4").innerText = s;
 
     document.getElementById("seconds1").style.animation = "flip 0.45s";
     document.getElementById("seconds1").addEventListener('animationend', () => {
